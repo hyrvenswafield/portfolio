@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio - HW Alexandre</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <nav class="navbar">
+        <h2>Hyrvens Wafield Alexandre</h2>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ACCUEIL -->
+<section id="accueil" class="section accueil">
+    <h1>Je suis Alexandre, développeur web débutant</h1>
+    <p>Passionné par le web et le design</p>
+    <a href="#projets" class="btn">Voir mes projets</a>
+</section>
+
+<!-- A PROPOS -->
+
+<section id="apropos" class="section apropos">
+    <h2>À propos</h2>
+
+    <div class="apropos-contenu">
+        <img src="images/photo.jpg" alt="Photo de Alexandre" class="photo-profil">
+
+        <p>
+            Je m'appelle Alexandre. Je suis étudiant en développement web et
+            j'apprends à créer des sites modernes avec HTML, CSS et JavaScript.
+            J’aime transformer des idées en projets concrets.
+        </p>
+    </div>
+
+    <button class="btn">Télécharger mon CV</button>
+</section>
+
+
+
+
+
+
+
+<!--<section id="apropos" class="section">
+    <h2>À propos</h2>
+    <p>
+        Je m'appelle Alexandre. Je suis étudiant en développement web et
+        j'apprends à créer des sites modernes avec HTML, CSS et JavaScript.
+        J’aime transformer des idées en projets concrets.
+    </p>
+    <button class="btn">Télécharger mon CV</button>
+</section>-->
+
+<!-- Dans cette séction, je présente mes projets -->
+<section id="projets" class="section gris">
+    <h2>Mes projets</h2>
+
+    <div class="projets-container">
+        <div class="projet">
+            <h3>Calculateur de prêt</h3>
+            <p>Application JavaScript utilisant des calculs mathématiques.</p>
+           
+            <button class="btn" onclick="afficherProjet('calculateur')">Voir</button>
+
+        </div>
+
+        <div class="projet">
+            <h3>Horloge en temps réel</h3>
+            <p>Affichage dynamique de l’heure avec l’objet Date.</p>
+           
+            <button class="btn" onclick="afficherProjet('horloge')">Voir</button>
+
+        </div>
+
+        <div class="projet">
+            <h3>Manipulation de tableaux</h3>
+            <p>Ajout, suppression et tri de tableaux en JavaScript.</p>
+            
+            <button class="btn" onclick="afficherProjet('tableaux')">Voir</button>
+
+        </div>
+    </div>
+</section>
+
+<!-- CALCULATEUR DE PRÊT -->
+
+<section id="calculateur" class="section projet-detail">
+
+    <h2>Calculateur de prêt hypothécaire</h2>
+
+    <input type="number" id="montant" placeholder="Montant du prêt">
+    <input type="number" id="taux" placeholder="Taux annuel (%)">
+    <input type="number" id="duree" placeholder="Durée (années)">
+    <button class="btn" onclick="calculerPret()">Calculer</button>
+
+    <p id="resultatPret"></p>
+</section>
+
+<!-- HORLOGE -->
+
+    <section id="horloge" class="section gris projet-detail">
+
+    <h2>Horloge en temps réel</h2>
+    <input type="text" id="heure" readonly>
+</section>
+
+
+<section id="tableaux" class="section projet-detail">
+    <h2>Manipulation de tableaux</h2>
+
+    <input type="number" id="nombreUtilisateur" placeholder="Entrez un nombre">
+    <button class="btn" onclick="ajouterNombre()">Ajouter</button>
+    <button class="btn" onclick="trierTableau()">Trier</button>
+
+    <p id="affichageTableau"></p>
+</section>
+
+
+<!-- Mes compétences -->
+<section id="competences" class="section">
+    <h2>Mes compétences</h2>
+
+    <div class="competences">
+        <div>
+            <h3>Hard skills</h3>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Soft skills</h3>
+            <ul>
+                <li>Motivation</li>
+                <li>Organisation</li>
+                <li>Je suis capable d'apprendre rapidement et de travailler sous pression</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section noir">
+    <h2>Vous avez un projet ? Contactez-moi</h2>
+
+    <form onsubmit="return verifierFormulaire()">
+        <input type="text" id="nom" placeholder="Votre nom">
+        <input type="email" id="email" placeholder="Votre email">
+        <textarea id="message" placeholder="Votre message"></textarea>
+        <button type="submit" class="btn">Envoyer</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 - Alexandre | HTML • CSS • JavaScript</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
